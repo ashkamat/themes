@@ -40,3 +40,164 @@ function coc_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'coc_enqueue_assets' );
+
+
+
+/**
+ * Hero Customizer Settings
+ */
+function coc_customize_register( $wp_customize ) {
+
+    $wp_customize->add_section( 'coc_hero', array(
+        'title'    => __( 'Hero Banner', 'centreofchange' ),
+        'priority' => 30,
+    ) );
+
+    /**
+     * Enable Video
+     */
+    $wp_customize->add_setting( 'hero_enable_video', array(
+        'default'           => true,
+        'sanitize_callback' => 'wp_validate_boolean',
+    ) );
+
+    $wp_customize->add_control( 'hero_enable_video', array(
+        'label'   => 'Enable Hero Video',
+        'section' => 'coc_hero',
+        'type'    => 'checkbox',
+    ) );
+
+    /**
+     * Poster Image
+     */
+    $wp_customize->add_setting( 'hero_poster' );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'hero_poster',
+            array(
+                'label'   => 'Hero Poster Image',
+                'section' => 'coc_hero',
+            )
+        )
+    );
+
+    /**
+     * MP4 Video
+     */
+    $wp_customize->add_setting( 'hero_video' );
+
+    $wp_customize->add_control(
+        new WP_Customize_Media_Control(
+            $wp_customize,
+            'hero_video',
+            array(
+                'label'     => 'Hero MP4 Video',
+                'section'   => 'coc_hero',
+                'mime_type' => 'video',
+            )
+        )
+    );
+
+
+// h3 first line
+	$wp_customize->add_setting( 'hero_h3', array(
+    'default' => 'Early Intervention & Economic Prevention',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'hero_h3', array(
+    'label'   => 'Hero Small Heading (H3)',
+    'section' => 'coc_hero',
+    'type'    => 'text',
+) );
+
+
+// big h1 textg
+$wp_customize->add_setting( 'hero_h1', array(
+    'default' => 'Counselling',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'hero_h1', array(
+    'label'   => 'Hero Main Heading (H1)',
+    'section' => 'coc_hero',
+    'type'    => 'text',
+) );
+
+// paragraph
+
+$wp_customize->add_setting( 'hero_h2', array(
+    'default' => 'Helping young people and families in Croydon to overcome emotional barriers',
+    'sanitize_callback' => 'sanitize_textarea_field',
+) );
+
+$wp_customize->add_control( 'hero_h2', array(
+    'label'   => 'Hero Description',
+    'section' => 'coc_hero',
+    'type'    => 'textarea',
+) );
+
+
+// hero cta 1 
+
+$wp_customize->add_setting( 'hero_button1_text', array(
+    'default' => 'Counselling',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'hero_button1_text', array(
+    'label'   => 'Button 1 Text',
+    'section' => 'coc_hero',
+    'type'    => 'text',
+) );
+
+// hero ct 1 link
+
+$wp_customize->add_setting( 'hero_button1_url', array(
+    'default' => '#',
+    'sanitize_callback' => 'esc_url_raw',
+) );
+
+$wp_customize->add_control( 'hero_button1_url', array(
+    'label'   => 'Button 1 URL',
+    'section' => 'coc_hero',
+    'type'    => 'url',
+) );
+
+
+// hero cta 2
+
+$wp_customize->add_setting( 'hero_button2_text', array(
+    'default' => 'Impact Report',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'hero_button2_text', array(
+    'label'   => 'Button 2 Text',
+    'section' => 'coc_hero',
+    'type'    => 'text',
+) );
+
+
+// hero cta 2 link
+$wp_customize->add_setting( 'hero_button2_url', array(
+    'default' => '#',
+    'sanitize_callback' => 'esc_url_raw',
+) );
+
+$wp_customize->add_control( 'hero_button2_url', array(
+    'label'   => 'Button 2 URL',
+    'section' => 'coc_hero',
+    'type'    => 'url',
+) );
+
+}
+add_action( 'customize_register', 'coc_customize_register' );
+
+
+
+/**
+ * Hero Customizer Settings END
+ */

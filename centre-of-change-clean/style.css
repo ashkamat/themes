@@ -481,6 +481,7 @@ footer {
     /* keeps it left on desktop */
     padding-left: 5%;
     /* breathing room from the edge */
+    background-image: cover;
 }
 
 .hero-content {
@@ -538,6 +539,7 @@ footer {
     object-fit: cover;
     z-index: 0;
 }
+
 
 
 /* hero mobile */

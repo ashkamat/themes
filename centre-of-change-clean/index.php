@@ -1,63 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" <?php language_attributes(); ?>>
-
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?> class="home page">
-
-	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
-
-
-	<header aria-label="header" id="masthead" class="site-header">
-		<div class="site-branding">
-
-
-			<p class="site-title"><a href="/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/centre_of_change_logo.svg"
-						alt="Centre of Change Logo"></a></p>
-			<p class="smallText">Centre of Change</p>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation" aria-label="Primary">
-
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<svg class="icon icon--menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
-					height="28" fill="currentColor" aria-hidden="true">
-					<path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
-				</svg>
-				<span class="screen-reader-text">Menu</span>
-			</button>
-
-			<div class="menu-panel" id="menu-panel">
-				<button class="menu-close">
-					<svg class="icon icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
-						height="28" fill="currentColor" aria-hidden="true">
-						<path
-							d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z">
-						</path>
-					</svg>
-					<span class="screen-reader-text">Close menu</span>
-				</button>
-		<ul id="primary-menu" class="menu">
-					<li class="menu-item"><a href="index.html">Home</a></li>
-					<li class="menu-item"><a href="page.html">About</a></li>
-					<li class="menu-item"><a href="team.html">Team</a></li>
-					<li class="menu-item"><a href="single.html">Blog</a></li>
-				</ul>
-			</div>
-
-			<a class="button button--nav-cta" href="/support">Get Support</a>
-		</nav>
-	</header>
-	<!-- ////////////HEADER end ///////////// -->
-
-
-	<!-- ////////////MAIN START ////////////-->
-
-	<main id="main" class="site-main">
+<?php get_header()?>
 
 
 		<!-- Hero Start with video -->
@@ -432,42 +373,44 @@
 		<section class="pre-footer" aria-labelledby="our-partners-heading">
 			<h3 id="our-partners-heading">Our Partners</h3>
 
-			<ul class="partner-logos" role="list">
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image 17.png" alt="Social Prescribing Link Worker">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/ASPIRE2B.svg" alt="Aspire2B">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-8.png" alt="BACP">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-9.png" alt="CAMHS – Child and Adolescent Mental Health Service">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-10.png" alt="NHS Croydon Health Services">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-11.png" alt="[Confirm exact trust name] – Celebrating 175 Years">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-13.png" alt="Croydon Council">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-14.png" alt="Croydon Family Hub">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-15.png" alt="Samuel Coleridge-Taylor Family Hub">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-16.png" alt="Family Justice Centre – Foyle">
-	</li>
-	<li class="partner-logos__item" role="listitem">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-18.png" alt="Asian Resource Centre for Communities">
-	</li>
-</ul>
+                    <!-- logo list here -->
+                    <ul class="partner-logos" role="list">
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image 17.png" alt="Social Prescribing Link Worker">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/ASPIRE2B.svg" alt="Aspire2B">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-8.png" alt="BACP">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-9.png" alt="CAMHS – Child and Adolescent Mental Health Service">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-10.png" alt="NHS Croydon Health Services">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-11.png" alt="[Confirm exact trust name] – Celebrating 175 Years">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-13.png" alt="Croydon Council">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-14.png" alt="Croydon Family Hub">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-15.png" alt="Samuel Coleridge-Taylor Family Hub">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-16.png" alt="Family Justice Centre – Foyle">
+                        </li>
+                        <li class="partner-logos__item" role="listitem">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-18.png" alt="Asian Resource Centre for Communities">
+                        </li>
+                    </ul>
 
+            <!-- the familie icon that appears at the top of the footer -->
 			<div class="pre-footer-icon">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/prefooter_icon.svg" alt="bottom pre footer family icon">
 			</div>
@@ -475,117 +418,5 @@
 		<!-- //////PRE footer end //// -->
 
 
-	</main>
-	<!-- //////MAIN END////////-->
 
-
-	<!-- ///////////footer start////////// -->
-	<footer aria-label="footer" id="colophon" class="site-footer">
-		<div class="footer-columns">
-
-			<div class="footer-col footer-col--brand">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Centre of Change Logo">
-
-				<h3>Counseling</h3>
-				<h4>Early Intervention & Economic Prevention</h4>
-				<p>Helping young people and families in Croydon to overcome emotional barriers</p>
-				<img id="bacpFooterLogo" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/image-8.png" alt="BACP accredited">
-				<p class="smallText">BACP accredited</p>
-
-				<a href="tel:07758702452">📞 07758 702452</a>
-			</div>
-		
-
-		<nav class="footer-col" aria-labelledby="footer-heading-main-menu">
-    <h4 id="footer-heading-main-menu">Main Menu</h4>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Training</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-<nav class="footer-col" aria-labelledby="footer-heading-services">
-    <h4 id="footer-heading-services">Services</h4>
-    <ul>
-        <li><a href="#">Counselling</a></li>
-        <li><a href="#">Mentoring</a></li>
-        <li><a href="#">Practitioners</a></li>
-    </ul>
-</nav>
-
-<nav class="footer-col" aria-labelledby="footer-heading-quickLinks">
-    <h4 id="footer-heading-quickLinks">Quick Links</h4>
-    <ul>
-        <li><a href="#">Volunteer</a></li>
-        <li><a href="#">Impact</a></li>
-        <li><a href="#">FAQ</a></li>
-    </ul>
-</nav>
-
-<nav class="footer-col" aria-labelledby="footer-heading-social">
-    <h4 id="footer-heading-social">Social Media</h4>
-  
-
-	<ul class="social-list">
-    <li>
-        <a href="#" class="social-icon-link" aria-label="Instagram">
-            <i class="ri-instagram-fill" aria-hidden="true"></i>
-        </a>
-    </li>
-    <li>
-        <a href="#" class="social-icon-link" aria-label="TikTok">
-            <i class="ri-tiktok-fill" aria-hidden="true"></i>
-        </a>
-    </li>
-    <li>
-        <a href="#" class="social-icon-link" aria-label="YouTube">
-            <i class="ri-youtube-fill" aria-hidden="true"></i>
-        </a>
-    </li>
-    <li>
-        <a href="#" class="social-icon-link" aria-label="Twitter (X)">
-            <i class="ri-twitter-x-fill" aria-hidden="true"></i>
-        </a>
-    </li>
-    <li>
-        <a href="#" class="social-icon-link" aria-label="WhatsApp">
-            <i class="ri-whatsapp-fill" aria-hidden="true"></i>
-        </a>
-    </li>
-</ul>
-
-
-</nav>
-
-		</div>
-
-
-		<!-- copyright -->
-		<div class="footer-bottom">
-			<p>Copyright &copy; 2026 Centre Of Change. All rights reserved.</p>
-			<p>Charity number: 1182201</p>
-			<nav aria-label="Legal">
-				<ul>
-					<li><a href="#">Terms &amp; Conditions</a></li>
-					<li><a href="#">Cookies</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-				</ul>
-			</nav>
-		</div>
-	</footer>
-
-
-	<!-- /////////// footer end ///////// -->
-
-	<!-- swiper script -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer()?>

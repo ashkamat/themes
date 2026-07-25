@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'coc_enqueue_assets' );
 
 
 /**
- * Hero Customizer Settings
+ * Hero / CTA top right Customizer Settings
  */
 function coc_customize_register( $wp_customize ) {
 
@@ -193,11 +193,183 @@ $wp_customize->add_control( 'hero_button2_url', array(
     'type'    => 'url',
 ) );
 
+
+/**
+ * Navigation CTA Button
+ */
+$wp_customize->add_section( 'coc_nav_cta', array(
+    'title'    => __( 'Navigation CTA Button', 'centreofchange' ),
+    'priority' => 40,
+) );
+
+
+/**
+ * Nav CTA Text
+ */
+$wp_customize->add_setting( 'nav_cta_text', array(
+    'default'           => 'Get Support',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'nav_cta_text', array(
+    'label'   => 'Button Text',
+    'section' => 'coc_nav_cta',
+    'type'    => 'text',
+) );
+
+
+/**
+ * Nav CTA URL
+ */
+$wp_customize->add_setting( 'nav_cta_url', array(
+    'default'           => '/support',
+    'sanitize_callback' => 'esc_url_raw',
+) );
+
+$wp_customize->add_control( 'nav_cta_url', array(
+    'label'   => 'Button URL',
+    'section' => 'coc_nav_cta',
+    'type'    => 'url',
+) );
+
+
+
+/**
+ * Services Cards
+ */
+$wp_customize->add_section( 'coc_services_cards', array(
+    'title'    => __( 'Services Cards', 'centreofchange' ),
+    'priority' => 50,
+));
+
+
+$service_cards = array(
+    1 => array(
+        'title'    => 'Counselling Services',
+        'text'     => 'Tailor-made, bespoke programmes for children, young people, and families. Whether addressing trauma and loss or seeking guidance through life coaching, our qualified professionals provide a safe space to manage well-being positively.',
+        'cta_text' => 'Get Support',
+        'cta_url'  => '/support',
+    ),
+
+    2 => array(
+        'title'    => 'Professionals & Referrers',
+        'text'     => 'We provide safe, professional pathways for GPs, schools, and multi-agency hubs like Family Justice Centres. We act as a critical downstream partner, offering long-term therapeutic support to reduce pressure on statutory crisis services.',
+        'cta_text' => 'Refer Someone',
+        'cta_url'  => '/referrals',
+    ),
+
+    3 => array(
+        'title'    => 'Our Impact & Case Studies',
+        'text'     => 'Data is our currency. We demonstrate how our holistic model improves educational attainment and emotional resilience, preventing the long-term economic inactivity often associated with youth mental health challenges in the community.',
+        'cta_text' => 'View Impact',
+        'cta_url'  => '/impact',
+    ),
+);
+
+
+foreach ( $service_cards as $number => $card ) {
+
+
+    /*
+     * Card Title
+     */
+    $wp_customize->add_setting(
+        'service_card_' . $number . '_title',
+        array(
+            'default'           => $card['title'],
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'service_card_' . $number . '_title',
+        array(
+            'label'   => 'Service Card ' . $number . ' Title',
+            'section' => 'coc_services_cards',
+            'type'    => 'text',
+        )
+    );
+
+
+
+    /*
+     * Card Text
+     */
+    $wp_customize->add_setting(
+        'service_card_' . $number . '_text',
+        array(
+            'default'           => $card['text'],
+            'sanitize_callback' => 'sanitize_textarea_field',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'service_card_' . $number . '_text',
+        array(
+            'label'   => 'Service Card ' . $number . ' Text',
+            'section' => 'coc_services_cards',
+            'type'    => 'textarea',
+        )
+    );
+
+
+
+    /*
+     * CTA Text
+     */
+    $wp_customize->add_setting(
+        'service_card_' . $number . '_cta_text',
+        array(
+            'default'           => $card['cta_text'],
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'service_card_' . $number . '_cta_text',
+        array(
+            'label'   => 'Service Card ' . $number . ' Button Text',
+            'section' => 'coc_services_cards',
+            'type'    => 'text',
+        )
+    );
+
+
+
+    /*
+     * CTA URL
+     */
+    $wp_customize->add_setting(
+        'service_card_' . $number . '_cta_url',
+        array(
+            'default'           => $card['cta_url'],
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'service_card_' . $number . '_cta_url',
+        array(
+            'label'   => 'Service Card ' . $number . ' Button URL',
+            'section' => 'coc_services_cards',
+            'type'    => 'url',
+        )
+    );
+
+}
+
 }
 add_action( 'customize_register', 'coc_customize_register' );
 
 
 
 /**
- * Hero Customizer Settings END
+ * Hero and CTA Customizer Settings END
  */
+
+
+

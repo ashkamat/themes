@@ -66,7 +66,13 @@
 
 			</div>
 
-			<a class="button button--nav-cta" href="/support">Get Support</a>
+				<!-- top right CTA get support button data from customiser -->
+				 <a 
+    class="button button--nav-cta" 
+    href="<?php echo esc_url( get_theme_mod( 'nav_cta_url', '/support' ) ); ?>"
+>
+    <?php echo esc_html( get_theme_mod( 'nav_cta_text', 'Get Support' ) ); ?>
+</a>
 		</nav>
 	</header>
 	<!-- ////////////HEADER end ///////////// -->

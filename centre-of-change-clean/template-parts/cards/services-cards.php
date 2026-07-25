@@ -3,9 +3,14 @@
 
 			<ul class="card-grid">
 
+
+				<!-- card 1 -->
 				<li class="card">
 					<article class="card-inner">
-						<h3 class="card-title">Counselling Services</h3>
+						<h3 class="card-title"><?php echo esc_html( get_theme_mod(
+						'service_card_1_title',
+						'Counselling Services'
+					) ); ?></h3>
 
 						<span class="card-icon" aria-hidden="true">
 							<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -47,16 +52,26 @@
 							</svg>
 						</span>
 
-						<p class="card-text">Tailor-made, bespoke programmes for children, young people, and families.
-							Whether addressing trauma and loss or seeking guidance through life coaching, our qualified
-							professionals provide a safe space to manage well-being positively</p>
+						<p class="card-text"><?php echo esc_html( get_theme_mod(
+							'service_card_1_text',
+							''
+						) ); ?></p>
 
-						<a class="button card-cta" href="#">Get Support</a>
+						<a class="button card-cta" href="<?php echo esc_url( get_theme_mod(
+					'service_card_1_cta_url',
+					'/support'
+					) ); ?>"><i class="ri-arrow-right-s-line"></i><?php echo esc_html( get_theme_mod(
+						'service_card_1_cta_text',
+						'Get Support'
+					) ); ?></a>
 					</article>
 				</li>
+
+
+					<!-- Card 2 -->
 				<li class="card">
 					<article class="card-inner">
-						<h3 class="card-title">Professionals & Referrers</h3>
+						<h3 class="card-title"><?php echo esc_html( get_theme_mod('service_card_2_title','Professionals & Referrers') ); ?></h3>
 
 						<span class="card-icon" aria-hidden="true">
 							<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -79,17 +94,18 @@
 							</svg>
 						</span>
 
-						<p class="card-text">We provide safe, professional pathways for GPs, schools, and multi-agency
-							hubs like Family Justice Centres.
-							We act as a critical "downstream" partner, offering long-term therapeutic support to reduce
-							pressure on statutory crisis services.</p>
+						<p class="card-text"><?php echo esc_html( get_theme_mod('service_card_2_text','') ); ?></p>
 
-						<a class="button card-cta" href="#">Get Support</a>
+						<a class="button card-cta" href="<?php echo esc_url( get_theme_mod('service_card_2_cta_url','/referrals') ); ?>"><i class="ri-arrow-right-s-line"></i><?php echo esc_html( get_theme_mod('service_card_2_cta_text','Refer Someone') ); ?></a>
 					</article>
 				</li>
+
+
+
+				<!-- Card 3 -->
 				<li class="card">
 					<article class="card-inner">
-						<h3 class="card-title">Our Impact & Case Studies</h3>
+						<h3 class="card-title"><?php echo esc_html( get_theme_mod('service_card_3_title','Professionals & Referrers') ); ?></h3>
 
 						<span class="card-icon" aria-hidden="true">
 							<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -149,11 +165,9 @@
 							</svg>
 						</span>
 
-						<p class="card-text">Data is our currency. We demonstrate how our holistic model improves
-							educational attainment and emotional resilience, preventing the long-term economic
-							inactivity often associated with youth mental health challenges in the community</p>
+						<p class="card-text"><p class="card-text"><?php echo esc_html( get_theme_mod('service_card_3_text','') ); ?></p>
 
-						<a class="button card-cta" href="#">Get Support</a>
+						<a class="button card-cta" href="<?php echo esc_url( get_theme_mod('service_card_3_cta_url','/referrals') ); ?>"><i class="ri-arrow-right-s-line"></i><?php echo esc_html( get_theme_mod('service_card_3_cta_text','View Report') ); ?></a>
 					</article>
 				</li>
 

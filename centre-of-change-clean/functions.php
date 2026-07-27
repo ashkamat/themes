@@ -374,9 +374,10 @@ add_action( 'customize_register', 'coc_customize_register' );
 
 
 /**
- * Disable the WordPress content editor for Pages
+ * Disable the WordPress content editor for Pages and Posts
  */
-function coc_disable_page_editor() {
+function coc_disable_content_editor() {
     remove_post_type_support( 'page', 'editor' );
+    remove_post_type_support( 'post', 'editor' );
 }
-add_action( 'init', 'coc_disable_page_editor' );
+add_action( 'init', 'coc_disable_content_editor' );

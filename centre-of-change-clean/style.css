@@ -98,6 +98,7 @@ p {
     font-size: .8rem;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 
@@ -593,7 +594,7 @@ section.single-hero-section {
     grid-template-columns: 1fr 1fr;
     min-height: 550px;
     width: 100%;
-    background-image:url(assets/images/projects/junk-bin06.webp);
+
     background-size: cover;
     background-position: center;
 }

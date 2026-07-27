@@ -18,7 +18,7 @@
 
 			<p class="site-title"><a href="/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/centre_of_change_logo.svg"
 						alt="Centre of Change Logo"></a></p>
-			<p class="smallText">Centre of Change</p>
+			<p class="smallTextLogo">Centre of Change</p>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" aria-label="Primary">

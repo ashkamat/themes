@@ -96,9 +96,15 @@ p {
 
 .smallText {
     font-size: .8rem;
-    margin: 0;
-    padding: 0;
     text-align: center;
+    padding-top: .5rem;
+    padding-left: var(--global-padding);
+     padding-right: var(--global-padding);
+}
+
+.smallTextLogo {
+    font-size: .8rem;
+
 }
 
 
